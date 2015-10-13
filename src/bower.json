@@ -1,0 +1,21 @@
+{
+  "name": "meteoflip",
+  "version": "0.0.1",
+  "authors": [
+    "Valentino Di Domenico <valentino.didomenico@gmail.com>"
+  ],
+  "description": "a simple meteo flipcard",
+  "main": "home.html",
+  "license": "MIT",
+  "homepage": "home.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

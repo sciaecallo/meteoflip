@@ -1,0 +1,289 @@
+@import "../../bower_components/susy/sass/susy";
+@import "compass/layout/stretching";
+
+// =============
+// Susy settings
+// =============
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);
+
+$iphone     : 480px;
+$tablet     : 640px;
+$desktop    : 980px;
+
+
+// ===============
+// Custom settings
+// ===============
+
+$golden: 1.61803;
+$base-font-size: 16px;
+$base-line-height: round($base-font-size * $golden);
+$round-to-nearest-half-line: true;
+$rhythm-unit: 'rem';
+
+$heading-size: (h1: 3em, h2: 2.6em, h3: 2.2em, h4: 1.8em, h5: 1.4em, h6: 1.2em) !default;
+
+$main-color: #053869;
+$secondary-color: #f7a51c;
+$text-color: #666666;
+
+@font-face {
+    font-family: 'Meteo-Flip';
+    src:url('../fonts/Meteo-Flip.eot?x95scf');
+    src:url('../fonts/Meteo-Flip.eot?x95scf#iefix') format('embedded-opentype'),
+        url('../fonts/Meteo-Flip.ttf?x95scf') format('truetype'),
+        url('../fonts/Meteo-Flip.woff?x95scf') format('woff'),
+        url('../fonts/Meteo-Flip.svg?x95scf#Meteo-Flip') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], .icon {
+    font-family: 'Meteo-Flip';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$main-color: lighten(#133253, 10%);
+
+
+.your-div {
+    width: 400px;
+    float: right;
+}
+
+.big-icon {
+    font-size: 3.5em;
+    line-height: 1.6;
+}
+
+.small-icon {
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.flip-container {
+    perspective: 1000;
+    margin: 0 auto;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+    background-color: #133253;
+    color: $main-color;
+    overflow: hidden;
+    width: 100%;
+
+    &.flip {
+        .flipper {
+            transform: rotateY(180deg);
+        }
+        .end-flip {
+            visibility: visible;
+        }
+    }
+}
+
+.flipper {
+    margin: 1em;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 350px;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    transform: translateZ(0deg);
+    border-radius: 10px;
+}
+
+
+.main-info {
+    background-color: #fff;
+    padding: 1em 0.5em;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+
+    // @include susy-media($desktop) {
+    //     width: 61.8%;
+    //     border-radius: 10px 0 0 10px;
+    //     padding: 1em 0.5em 2em;
+    // }
+}
+
+.secondary-info {
+    @include stretch();
+    // @include susy-media($desktop) {
+    //     display: block;
+    //     @include stretch(0, 0, 0, 61.8%);
+    //     border-radius: 0 10px 10px 0;
+    //     z-index: 1;
+    //     padding: 0;
+    //     width: 38.2%;
+    // }
+}
+
+#map {
+    @include stretch;
+    transform-style: preserve-3d;
+}
+
+.main-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 3em;
+    line-height: 2;
+    @include susy-media($iphone) {
+        margin: 0 0 0.7em 0;
+    }
+}
+
+.meteo {
+    display: block;
+    margin-bottom: 2em;
+    vertical-align: middle;
+    @include susy-media($tablet) {
+        display: inline-block;
+        width: span(1 of 2 no-gutter);
+        margin-bottom: 2em;
+    }
+}
+
+.main-subtitle {
+    font-size: 2em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.weather-info_wrapper{
+    @include susy-media($tablet) {
+        display: inline-block;
+        width: span(1 of 2 no-gutter);
+        vertical-align: middle;
+    }
+}
+
+.weather-info {
+    margin-bottom: 2em;
+    list-style-type: none;
+    padding: 1em 0;
+    margin: 0 1em;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+
+    @include susy-media($iphone) {
+        border: 0;
+    }
+
+    .weather-item {
+        box-sizing: border-box;
+        padding: 0.5em 2em;
+        margin: 0.5em 0;
+        position: relative;
+
+        @include susy-media($iphone) {
+            display: inline-block;
+            width: span(1 of 3 no-gutter);
+            box-sizing: border-box;
+        }
+
+        @include susy-media($tablet) {
+            display: block;
+            width: auto;
+        }
+
+        .icon {
+            position: absolute;
+            left: 2em;
+
+            @include susy-media($iphone) {
+                position: static;
+                left: 0;
+                display: block;
+                padding: 1em 0;
+            }
+
+            @include susy-media($tablet) {
+                position: absolute;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.main-footer {
+    padding: 2em 0;
+}
+
+.start-flip {
+    text-decoration: none;
+    color: #133253;
+    font-size: 2em;
+    padding: 0.5em;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-radius 0.6s ease-in-out;
+
+    &:hover {
+        background-color: $main-color;
+        color: #fff;
+        border-radius: 10px;
+    }
+}
+
+.end-flip {
+    position: absolute;
+    top: 5%;
+    transform-style: preserve-3d;
+    left: 50%;
+    transform: rotateY(0deg) translateX(-50%);
+    visibility: hidden;
+    z-index: 30;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: $main-color;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+    transition: color 0.3s ease-in-out, backgroundcolor 0.3s ease-in-out;
+
+    span {
+        display: block;
+        transition: rotate 0.3s ease-in-out 1.6s;
+    }
+
+    &:hover {
+        color: $main-color;
+        background-color: #fff;
+
+        & > span {
+            transform: rotate(10deg);
+        }
+    }
+}

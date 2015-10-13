@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Meteo-Flip';
+  src: url("../fonts/Meteo-Flip.eot?x95scf");
+  src: url("../fonts/Meteo-Flip.eot?x95scf#iefix") format("embedded-opentype"), url("../fonts/Meteo-Flip.ttf?x95scf") format("truetype"), url("../fonts/Meteo-Flip.woff?x95scf") format("woff"), url("../fonts/Meteo-Flip.svg?x95scf#Meteo-Flip") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 45, ../sass/style.scss */
+[class^="icon-"], [class*=" icon-"], .icon {
+  font-family: 'Meteo-Flip';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 62, ../sass/style.scss */
+.your-div {
+  width: 400px;
+  float: right;
+}
+
+/* line 67, ../sass/style.scss */
+.big-icon {
+  font-size: 3.5em;
+  line-height: 1.6;
+}
+
+/* line 72, ../sass/style.scss */
+.small-icon {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+/* line 77, ../sass/style.scss */
+.flip-container {
+  perspective: 1000;
+  margin: 0 auto;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  background-color: #133253;
+  color: #1d4b7d;
+  overflow: hidden;
+  width: 100%;
+}
+/* line 87, ../sass/style.scss */
+.flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+/* line 90, ../sass/style.scss */
+.flip-container.flip .end-flip {
+  visibility: visible;
+}
+
+/* line 96, ../sass/style.scss */
+.flipper {
+  margin: 1em;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+}
+
+/* line 103, ../sass/style.scss */
+.front, .back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 350px;
+}
+
+/* line 112, ../sass/style.scss */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* line 117, ../sass/style.scss */
+.back {
+  transform: rotateY(180deg);
+  transform: translateZ(0deg);
+  border-radius: 10px;
+}
+
+/* line 124, ../sass/style.scss */
+.main-info {
+  background-color: #fff;
+  padding: 1em 0.5em;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* line 138, ../sass/style.scss */
+.secondary-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 150, ../sass/style.scss */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-style: preserve-3d;
+}
+
+/* line 155, ../sass/style.scss */
+.main-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 2;
+}
+@media (min-width: 480px) {
+  /* line 155, ../sass/style.scss */
+  .main-title {
+    margin: 0 0 0.7em 0;
+  }
+}
+
+/* line 165, ../sass/style.scss */
+.meteo {
+  display: block;
+  margin-bottom: 2em;
+  vertical-align: middle;
+}
+@media (min-width: 640px) {
+  /* line 165, ../sass/style.scss */
+  .meteo {
+    display: inline-block;
+    width: 44.44444%;
+    margin-bottom: 2em;
+  }
+}
+
+/* line 176, ../sass/style.scss */
+.main-subtitle {
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  /* line 182, ../sass/style.scss */
+  .weather-info_wrapper {
+    display: inline-block;
+    width: 44.44444%;
+    vertical-align: middle;
+  }
+}
+
+/* line 190, ../sass/style.scss */
+.weather-info {
+  margin-bottom: 2em;
+  list-style-type: none;
+  padding: 1em 0;
+  margin: 0 1em;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+@media (min-width: 480px) {
+  /* line 190, ../sass/style.scss */
+  .weather-info {
+    border: 0;
+  }
+}
+/* line 202, ../sass/style.scss */
+.weather-info .weather-item {
+  box-sizing: border-box;
+  padding: 0.5em 2em;
+  margin: 0.5em 0;
+  position: relative;
+}
+@media (min-width: 480px) {
+  /* line 202, ../sass/style.scss */
+  .weather-info .weather-item {
+    display: inline-block;
+    width: 28.57143%;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 640px) {
+  /* line 202, ../sass/style.scss */
+  .weather-info .weather-item {
+    display: block;
+    width: auto;
+  }
+}
+/* line 219, ../sass/style.scss */
+.weather-info .weather-item .icon {
+  position: absolute;
+  left: 2em;
+}
+@media (min-width: 480px) {
+  /* line 219, ../sass/style.scss */
+  .weather-info .weather-item .icon {
+    position: static;
+    left: 0;
+    display: block;
+    padding: 1em 0;
+  }
+}
+@media (min-width: 640px) {
+  /* line 219, ../sass/style.scss */
+  .weather-info .weather-item .icon {
+    position: absolute;
+    padding: 0;
+  }
+}
+
+/* line 238, ../sass/style.scss */
+.main-footer {
+  padding: 2em 0;
+}
+
+/* line 242, ../sass/style.scss */
+.start-flip {
+  text-decoration: none;
+  color: #133253;
+  font-size: 2em;
+  padding: 0.5em;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-radius 0.6s ease-in-out;
+}
+/* line 249, ../sass/style.scss */
+.start-flip:hover {
+  background-color: #1d4b7d;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* line 256, ../sass/style.scss */
+.end-flip {
+  position: absolute;
+  top: 5%;
+  transform-style: preserve-3d;
+  left: 50%;
+  transform: rotateY(0deg) translateX(-50%);
+  visibility: hidden;
+  z-index: 30;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #1d4b7d;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 70px;
+  text-align: center;
+  transition: color 0.3s ease-in-out, backgroundcolor 0.3s ease-in-out;
+}
+/* line 276, ../sass/style.scss */
+.end-flip span {
+  display: block;
+  transition: rotate 0.3s ease-in-out 1.6s;
+}
+/* line 281, ../sass/style.scss */
+.end-flip:hover {
+  color: #1d4b7d;
+  background-color: #fff;
+}
+/* line 285, ../sass/style.scss */
+.end-flip:hover > span {
+  transform: rotate(10deg);
+}

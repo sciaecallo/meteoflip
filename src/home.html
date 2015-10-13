@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>meteoJs - il tuo widget per il meteo</title>
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <link href="assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="your-div">
+        <div class="flip-container">
+            <section class="flipper">
+                <div class="front main-info">
+
+                    <h2 class="main-title">roma</h2>
+                    <div class="meteo">
+                        <div class="icon big-icon main-icon">&#xe61e;</div>
+                        <h4 class="main-subtitle">soleggiato</h4>
+                    </div>
+
+                    <aside class="weather-info_wrapper">
+                        <ul class="weather-info">
+                            <li class="weather-item small-icon">
+                                <span class="icon">&#xe61f;</span>18°
+                            </li>
+                            <li class="weather-item small-icon">
+                                <span class="icon">&#xe61c;</span>28mph
+                            </li>
+                            <li class="weather-item small-icon">
+                                <span class="icon">&#xe61d;</span>40%
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <footer class="main-footer">
+                        <a href="#" class="icon start-flip big-icon">&#xe620;</a>
+                    </footer>
+                </div>
+
+                <aside class="back secondary-info">
+                    <a href="#" class="end-flip icon big-icon"><span>&#xe800;</span></a>
+                    <div id="map"></div>
+                </aside>
+
+            </section>
+        </div>
+    </div>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+<!-- <script src="https://query.yahooapis.com/v1/public/yql?q=select wind from weather.forecast where woeid in (select woeid from geo.places(1) where text='chicago, il')&format=json&callback=callbackFunction"></script> -->
+</body>
+</html>

@@ -1,0 +1,3 @@
+*.sublime-*
+layout
+src/node_modules
