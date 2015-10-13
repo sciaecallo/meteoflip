@@ -21,7 +21,7 @@
 
 /* line 62, ../sass/style.scss */
 .your-div {
-  width: 400px;
+  width: 500px;
   float: right;
 }
 
@@ -96,7 +96,7 @@
   position: relative;
 }
 
-/* line 138, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .secondary-info {
   position: absolute;
   top: 0;
@@ -105,7 +105,7 @@
   right: 0;
 }
 
-/* line 150, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 #map {
   position: absolute;
   top: 0;
@@ -115,7 +115,7 @@
   transform-style: preserve-3d;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .main-title {
   margin: 0;
   text-transform: uppercase;
@@ -123,20 +123,22 @@
   line-height: 2;
 }
 @media (min-width: 480px) {
-  /* line 155, ../sass/style.scss */
+  /* line 141, ../sass/style.scss */
   .main-title {
     margin: 0 0 0.7em 0;
   }
 }
 
-/* line 165, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .meteo {
   display: block;
   margin-bottom: 2em;
   vertical-align: middle;
+  padding: 0 1em;
+  box-sizing: border-box;
 }
 @media (min-width: 640px) {
-  /* line 165, ../sass/style.scss */
+  /* line 151, ../sass/style.scss */
   .meteo {
     display: inline-block;
     width: 44.44444%;
@@ -144,7 +146,7 @@
   }
 }
 
-/* line 176, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 .main-subtitle {
   font-size: 2em;
   line-height: 1.5;
@@ -152,15 +154,17 @@
 }
 
 @media (min-width: 640px) {
-  /* line 182, ../sass/style.scss */
+  /* line 170, ../sass/style.scss */
   .weather-info_wrapper {
     display: inline-block;
     width: 44.44444%;
     vertical-align: middle;
+    padding: 0 1em;
+    box-sizing: border-box;
   }
 }
 
-/* line 190, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 .weather-info {
   margin-bottom: 2em;
   list-style-type: none;
@@ -170,12 +174,12 @@
   border-bottom: 2px solid;
 }
 @media (min-width: 480px) {
-  /* line 190, ../sass/style.scss */
+  /* line 180, ../sass/style.scss */
   .weather-info {
     border: 0;
   }
 }
-/* line 202, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .weather-info .weather-item {
   box-sizing: border-box;
   padding: 0.5em 2em;
@@ -183,7 +187,7 @@
   position: relative;
 }
 @media (min-width: 480px) {
-  /* line 202, ../sass/style.scss */
+  /* line 192, ../sass/style.scss */
   .weather-info .weather-item {
     display: inline-block;
     width: 28.57143%;
@@ -191,19 +195,19 @@
   }
 }
 @media (min-width: 640px) {
-  /* line 202, ../sass/style.scss */
+  /* line 192, ../sass/style.scss */
   .weather-info .weather-item {
     display: block;
     width: auto;
   }
 }
-/* line 219, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 .weather-info .weather-item .icon {
   position: absolute;
   left: 2em;
 }
 @media (min-width: 480px) {
-  /* line 219, ../sass/style.scss */
+  /* line 209, ../sass/style.scss */
   .weather-info .weather-item .icon {
     position: static;
     left: 0;
@@ -212,19 +216,19 @@
   }
 }
 @media (min-width: 640px) {
-  /* line 219, ../sass/style.scss */
+  /* line 209, ../sass/style.scss */
   .weather-info .weather-item .icon {
     position: absolute;
     padding: 0;
   }
 }
 
-/* line 238, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 .main-footer {
   padding: 2em 0;
 }
 
-/* line 242, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .start-flip {
   text-decoration: none;
   color: #133253;
@@ -232,14 +236,14 @@
   padding: 0.5em;
   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-radius 0.6s ease-in-out;
 }
-/* line 249, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 .start-flip:hover {
   background-color: #1d4b7d;
   color: #fff;
   border-radius: 10px;
 }
 
-/* line 256, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .end-flip {
   position: absolute;
   top: 5%;
@@ -260,17 +264,17 @@
   text-align: center;
   transition: color 0.3s ease-in-out, backgroundcolor 0.3s ease-in-out;
 }
-/* line 276, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 .end-flip span {
   display: block;
   transition: rotate 0.3s ease-in-out 1.6s;
 }
-/* line 281, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 .end-flip:hover {
   color: #1d4b7d;
   background-color: #fff;
 }
-/* line 285, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 .end-flip:hover > span {
   transform: rotate(10deg);
 }

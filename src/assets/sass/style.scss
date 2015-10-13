@@ -60,7 +60,7 @@ $main-color: lighten(#133253, 10%);
 
 
 .your-div {
-    width: 400px;
+    width: 500px;
     float: right;
 }
 
@@ -127,24 +127,10 @@ $main-color: lighten(#133253, 10%);
     text-align: center;
     border-radius: 10px;
     position: relative;
-
-    // @include susy-media($desktop) {
-    //     width: 61.8%;
-    //     border-radius: 10px 0 0 10px;
-    //     padding: 1em 0.5em 2em;
-    // }
 }
 
 .secondary-info {
     @include stretch();
-    // @include susy-media($desktop) {
-    //     display: block;
-    //     @include stretch(0, 0, 0, 61.8%);
-    //     border-radius: 0 10px 10px 0;
-    //     z-index: 1;
-    //     padding: 0;
-    //     width: 38.2%;
-    // }
 }
 
 #map {
@@ -166,6 +152,8 @@ $main-color: lighten(#133253, 10%);
     display: block;
     margin-bottom: 2em;
     vertical-align: middle;
+    padding: 0 1em;
+    box-sizing: border-box;
     @include susy-media($tablet) {
         display: inline-block;
         width: span(1 of 2 no-gutter);
@@ -184,6 +172,8 @@ $main-color: lighten(#133253, 10%);
         display: inline-block;
         width: span(1 of 2 no-gutter);
         vertical-align: middle;
+        padding: 0 1em;
+        box-sizing: border-box;
     }
 }
 
